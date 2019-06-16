@@ -5,7 +5,7 @@ def remove_strawberry(contacts)
       details_hash.each do |x, y_hash|
         if x == :favorite_ice_cream_flavors
           y_hash.delete_if 
-          { ice_cream == "strawberry"}
+          {|ice cream| ice_cream == "strawberry"}
         end
       end
     end
